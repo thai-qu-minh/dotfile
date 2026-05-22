@@ -5,14 +5,14 @@ return {
   cmd = "Trouble",
   keys = {
     {
-      "<leader>xx",
+      "<leader>dd",
       "<cmd>Trouble diagnostics toggle<cr>",
-      desc = "Toggle diagnostic (workspace)",
+      desc = "Toggle diagnostics (workspace)",
     },
     {
-      "<leader>xX",
+      "<leader>df",
       "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
-      desc = "Toggle diagnostic (current buffer)",
-    }
+      desc = "Toggle diagnostics (current file)",
+    },
   }
 }

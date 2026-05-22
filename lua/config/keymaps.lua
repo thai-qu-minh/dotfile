@@ -9,10 +9,15 @@ vim.g.maplocalleader = " "
 map("n", "<leader>w", "<cmd>w<cr>", opts)
 map("n", "<leader>q", "<cmd>q<cr>", opts)
 map("n", "<leader>h", "<cmd>nohlsearch<cr>", opts)
-map("n", "<leader>e", "<cmd>Ex<cr>", opts) -- netrw quick open
 
 -- Movement between splits
 map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
+
+-- Same movement from terminal mode
+map("t", "<C-h>", "<C-\\><C-n><C-w>h", opts)
+map("t", "<C-j>", "<C-\\><C-n><C-w>j", opts)
+map("t", "<C-k>", "<C-\\><C-n><C-w>k", opts)
+map("t", "<C-l>", "<C-\\><C-n><C-w>l", opts)
