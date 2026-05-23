@@ -7,7 +7,7 @@ vim.g.maplocalleader = " "
 
 -- Quality of life
 map("n", "<leader>w", "<cmd>w<cr>", opts)
-map("n", "<leader>q", "<cmd>q<cr>", opts)
+map("n", "<leader>q", "<cmd>bdelete<cr>", opts)
 map("n", "<leader>h", "<cmd>nohlsearch<cr>", opts)
 
 -- Movement between splits

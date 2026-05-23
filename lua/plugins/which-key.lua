@@ -3,6 +3,7 @@ return {
 	event = "VeryLazy",
 	opts = {
 		delay = 500,
+		notify = false,
 		icons = { mappings = true },
 	},
 	config = function(_, opts)
