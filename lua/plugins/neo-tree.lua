@@ -24,6 +24,7 @@ return {
 				hide_by_name = { ".git" },
 			},
 			follow_current_file = { enabled = true },
+			use_libuv_file_watcher = true,
 		},
 		default_component_configs = {
 			indent = {
@@ -90,6 +91,16 @@ return {
 					vim.cmd("Neotree show")
 					vim.cmd("wincmd p")
 				end)
+			end,
+		})
+
+		-- Refresh git status when Neovim regains focus (after lazygit / terminal git ops)
+		vim.api.nvim_create_autocmd("FocusGained", {
+			callback = function()
+				local manager_ok, manager = pcall(require, "neo-tree.sources.manager")
+				if manager_ok then
+					manager.refresh("filesystem")
+				end
 			end,
 		})
 	end,
